@@ -5,7 +5,8 @@ ydata = 10 + 15.*exp(-xdata / 2) + randn(1, length(xdata));
 %Define the exponential model
 my_fun = @(p) sum((ydata- (p(1) + p(2).*exp(-xdata / p(3)))).^2);
 
-%Function to evaluate the model
+%Function to evaluate the model. In this case we need to provide the error
+%funtion: error sum of squares
 fun_eval = @(p, t) p(1) + p(2).*exp(-t / p(3));
 
 %Inital guesses
