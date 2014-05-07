@@ -17,7 +17,7 @@ def my_fun(par, t, y):
 def fun_eval(par, t):
     return par[0] + par[1] * np.exp(-t / par[2])
 
-#Initial guests
+#Initial guesses
 p0 = [min(ydata), max(ydata) - min(ydata), xdata[-3] / 3]
 
 #Nonlinear fit
